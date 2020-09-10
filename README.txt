@@ -1,0 +1,1 @@
+STP-SDK-Android v1.0.7 2020-09-10
