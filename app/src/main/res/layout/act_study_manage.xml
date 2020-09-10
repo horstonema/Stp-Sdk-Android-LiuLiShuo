@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_today_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日成就"
+            android:textSize="20dp" />
+
+
+        <Button
+            android:id="@+id/btn_follow_reading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="今日跟读评测"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_history_achievement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="历史成就"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_history_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跟读历史数据"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="起始时间"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:hint="起始时间" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="终止时间"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:hint="终止时间" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分页大小"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_page_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="分页大小" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注：当起始时间或终止时间为空时， 按照分页去获取数据" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_study_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="学习成就"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btn_follow_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跟读数据"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

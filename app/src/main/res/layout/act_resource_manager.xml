@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp">
+
+    <Button
+        android:id="@+id/btn_category_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="分类列表"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/btn_ablum_res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="专辑列表"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_play_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="历史记录"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_search_res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="搜索资源"
+        android:textSize="20dp" />
+
+</LinearLayout>

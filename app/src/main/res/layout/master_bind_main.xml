@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/expression_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/wifi_name_title"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:text="WIFI名称" />
+
+        <EditText
+            android:id="@+id/wifi_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@+id/wifi_name_title"
+            android:hint="WIFI名称" />
+
+        <TextView
+            android:id="@+id/wifi_pwd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@+id/wifi_name"
+            android:gravity="center_vertical"
+            android:text="WIFI密码" />
+
+        <EditText
+            android:id="@+id/wifi_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wifi_name"
+            android:layout_toRightOf="@+id/wifi_pwd_title"
+            android:hint="WIFI密码" />
+
+        <Button
+            android:id="@+id/button_send_voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wifi_pwd"
+            android:text="发送声波" />
+
+        <Button
+            android:id="@+id/button_send_roobo_voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_send_voice"
+            android:text="发送roobo声波" />
+
+        <Button
+            android:id="@+id/button_get_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_send_roobo_voice"
+            android:text="获取配网结果" />
+
+        <Button
+            android:id="@+id/button_blue_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_get_result"
+            android:text="蓝牙配网" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

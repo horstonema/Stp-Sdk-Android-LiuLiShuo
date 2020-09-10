@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('D:\\Work\\fm\\STP\\STP-APP-Android\\keystores\\stp-release-key.jks')
+            storePassword 'code@2019'
+            keyAlias = 'stp_app'
+            keyPassword 'code@stp'
+        }
+    }
+
+    lintOptions {
+        abortOnError false;
+    }
+    compileSdkVersion 25
+    buildToolsVersion "26.0.2"
+
+    defaultConfig {
+        applicationId "com.aiedevice.sdkdemo"
+        minSdkVersion 18
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.7"
+        multiDexEnabled true
+
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "qjiZQVBZkx9MQNiXogFu6A",
+                GETUI_APP_SECRET: "VhDRfX9RDU93j0l2MKsDa9",
+                GETUI_APP_KEY   : "FAWwF07vfS7yPwIrNkDm21"
+        ]
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a"
+        }
+
+        signingConfig signingConfigs.debug
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir('libs')
+            assets.srcDirs = ['src/main/assets']
+        }
+
+    }
+}
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "http://maven.365jiating.com/nexus/content/repositories/liveplayer/"
+    }
+    flatDir {
+        dirs 'libs'
+    }
+    google()
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:25.3.0'
+    implementation 'com.android.support:design:25.3.0'
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.google.zxing:core:3.0.0'
+    implementation 'io.reactivex:rxjava:1.1.8'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.3.0'
+    //glide图片加载
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
+
+    // ButterKnife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //个推
+    implementation 'com.getui:sdk:2.14.0.0'
+//    implementation project(':stpsdk')
+    implementation(name: 'stpsdk-release', ext: 'aar')
+
+}
