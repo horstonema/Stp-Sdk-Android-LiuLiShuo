@@ -21,7 +21,7 @@ android {
         minSdkVersion 18
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0.7"
+        versionName "1.0.8"
         multiDexEnabled true
 
         manifestPlaceholders = [
@@ -85,7 +85,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     //个推
-    implementation 'com.getui:sdk:2.14.0.0'
 //    implementation project(':stpsdk')
     implementation(name: 'stpsdk-release', ext: 'aar')
 
